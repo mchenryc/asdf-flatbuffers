@@ -16,3 +16,11 @@ jobs:
       - uses: GoogleCloudPlatform/release-please-action@v3
         with:
           release-type: simple
+          # release-please-action does not yet support `initial-version`,
+          # so adding "Release-As: 0.1.0" in a conventional commit
+          # should be `initial-version`, and support for it is currently pending in
+          # the release-please-action (it is supported in the release-please tool)
+          # and "Release-As: 0.1.0" does not seem to be working.
+          # Must be removed after first release
+          # release-as: 0.1.0
+          bump-minor-pre-major: true
