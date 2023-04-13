@@ -16,12 +16,17 @@
 
 # Dependencies
 
-**TODO: adapt this section**
-
-- `bash`, `curl`, `tar`: generic POSIX utilities.
+- `bash`, `curl`, `jq`, `unzip`: generic POSIX utilities.
 - `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
 
 # Install
+
+This plugin needs `unzip` and `jq` to be installed.
+
+If you have a Debian system you can install unzip it by typing:
+`sudo apt-get install unzip`
+
+Install jq with `asdf plugin add jq`
 
 Plugin:
 

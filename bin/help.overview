@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+cat <<"EOF"
+FlatBuffers is an efficient cross platform serialization library for multiple languages.
+ * On MacOS, the Universal binary is used if available.
+ * On Linux, binaries built by both Clang and GCC compiler are available, so must be specified in the version, which is ignored on MacOS and Windows.
+EOF

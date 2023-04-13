@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+cat <<"EOF"
+Git Repository:	https://github.com/mchenryc/asdf-flatbuffers
+Documentation:	https://flatbuffers.dev/
+EOF
