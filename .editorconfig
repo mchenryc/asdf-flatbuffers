@@ -2,5 +2,33 @@ root = true
 
 [*]
 charset = utf-8
+end_of_line = lf
+indent_size = 4
+tab_width = 4
+indent_style = space
 trim_trailing_whitespace = true
 insert_final_newline = true
+max_line_length = 100
+ij_continuation_indent_size = 8
+ij_formatter_off_tag = @formatter:off
+ij_formatter_on_tag = @formatter:on
+ij_formatter_tags_enabled = false
+ij_smart_tabs = false
+ij_visual_guides = none
+ij_wrap_on_typing = false
+
+[{*.bash,*.sh,*.zsh}]
+indent_size = 2
+tab_width = 2
+shell_variant      = posix # --language-variant
+binary_next_line   = true
+switch_case_indent = true  # --case-indent
+space_redirects    = true
+keep_padding       = true
+function_next_line = true  # --func-next-line
+ij_shell_binary_ops_start_line = true
+ij_shell_keep_column_alignment_padding = true
+ij_shell_minify_program = false
+ij_shell_redirect_followed_by_space = true
+ij_shell_switch_cases_indented = true
+ij_shell_use_unix_line_separator = true

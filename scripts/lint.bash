@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 
-shellcheck --shell=bash --external-sources \
-	bin/* --source-path=template/lib/ \
-	lib/* \
-	scripts/*
+SHFMT_ACTION=${SHFMT_ACTION:-"--diff"}
 
-shfmt --language-dialect bash --diff \
-	./**/*
+[[ "${SHFMT_ACTION}" == "--diff" ]] \
+  && shellcheck --shell=bash \
+    --external-sources \
+    --source-path=lib/ \
+    --source-path=scripts/ \
+    bin/* \
+    lib/* \
+    scripts/*
+
+shfmt --language-dialect bash "${SHFMT_ACTION}" \
+  -i 2 -ci -bn \
+  ./bin/* \
+  ./lib/* \
+  ./scripts/*
